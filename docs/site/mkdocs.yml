@@ -1,0 +1,53 @@
+site_name: "vergil-fixture-ts-lib"
+repo_url: https://github.com/vergil-project/vergil-fixture-ts-lib
+docs_dir: docs
+strict: true
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Snippets resolve only from inside docs_dir, and a missing one fails the build.
+  - pymdownx.snippets:
+      base_path: !relative $docs_dir
+      restrict_base_path: true
+      check_paths: true
+      url_download: false
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
