@@ -1,0 +1,36 @@
+# >>> vergil-managed: base + typescript (managed by vrg-github-repo-config update; do not edit) >>>
+*.swp
+*.swo
+*~
+*.bak
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.log
+.venv/
+.worktrees/
+.vergil/
+.superpowers/
+paad/security/
+paad/code-reviews/
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+build/
+dist/
+coverage.xml
+junit.xml
+licenses.json
+docs/site/site/
+docs/site/docs/changelog.md
+docs/site/docs/releases/
+mkdocs.staged.yml
+node_modules/
+*.tsbuildinfo
+coverage/
+npm-audit.json
+quality-eslint.json
+quality-tsc.txt
+# <<< vergil-managed <<<
