@@ -1,0 +1,16 @@
+[project]
+repository-type = "library"
+versioning-scheme = "semver"
+branching-model = "library-release"
+release-model = "tagged-release"
+primary-language = "typescript"
+
+[ci]
+integration-tests = false
+
+[publish]
+release = true
+docs = true
+
+[dependencies]
+vergil = "v2.1"
