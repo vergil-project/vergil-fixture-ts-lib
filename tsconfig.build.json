@@ -1,0 +1,14 @@
+{
+  // The build: the library's sources only, emitted to dist/ with declaration
+  // files. Type-checking the tests is tsconfig.json's job.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src"]
+}
