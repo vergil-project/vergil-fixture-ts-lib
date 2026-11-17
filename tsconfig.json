@@ -1,0 +1,10 @@
+{
+  // Vergil's managed base sets the target, the module system and the strict
+  // checks; this file adds only what the repo needs on top of it.
+  "extends": "./tsconfig.vergil.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": true
+  },
+  "include": ["src", "tests", "vitest.config.ts"]
+}
