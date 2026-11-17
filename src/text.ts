@@ -56,6 +56,17 @@ export function longestWord(text: string): string {
 }
 
 /**
+ * The distinct whitespace-separated words of `text`, in the order each first
+ * appears, compared exactly (case-sensitive); `[]` for blank text.
+ *
+ * @example
+ * uniqueWords("the cat saw the  dog"); // ["the", "cat", "saw", "dog"]
+ */
+export function uniqueWords(text: string): string[] {
+  return [...new Set(words(text))];
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example

@@ -144,6 +144,23 @@ longestWord("the quick  brown fox"); // "quick"
 longestWord("   "); // ""
 ```
 
+### `uniqueWords`
+
+```ts
+function uniqueWords(text: string): string[];
+```
+
+The distinct whitespace-separated words of `text`, in the order each first
+appears. Words are compared exactly, so `"The"` and `"the"` are different
+words. For blank text it gives `[]`.
+
+```ts
+import { uniqueWords } from "vergil-fixture-ts-lib";
+
+uniqueWords("the cat saw the  dog"); // ["the", "cat", "saw", "dog"]
+uniqueWords("   "); // []
+```
+
 ### `toSlug`
 
 ```ts
