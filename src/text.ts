@@ -36,6 +36,26 @@ export function reverseWords(text: string): string {
 }
 
 /**
+ * The longest whitespace-separated word in `text`, measured in characters
+ * (code points); the first one on a tie, and `""` for blank text.
+ *
+ * @example
+ * longestWord("the quick  brown fox"); // "quick"
+ */
+export function longestWord(text: string): string {
+  let longest = "";
+  let longestLength = 0;
+  for (const word of words(text)) {
+    const length = Array.from(word).length;
+    if (length > longestLength) {
+      longest = word;
+      longestLength = length;
+    }
+  }
+  return longest;
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
