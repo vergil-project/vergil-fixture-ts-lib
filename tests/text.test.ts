@@ -6,6 +6,7 @@ import {
   reverseWords,
   toIdentifier,
   toSlug,
+  uniqueWords,
   wordCount,
 } from "../src/index.js";
 
@@ -58,6 +59,20 @@ describe("longestWord", () => {
 
   it("gives nothing for blank text", () => {
     expect(longestWord("   ")).toBe("");
+  });
+});
+
+describe("uniqueWords", () => {
+  it("gives each word once, in the order it first appears", () => {
+    expect(uniqueWords("the cat saw the  dog")).toEqual(["the", "cat", "saw", "dog"]);
+  });
+
+  it("compares words exactly, so case matters", () => {
+    expect(uniqueWords("The the THE the")).toEqual(["The", "the", "THE"]);
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(uniqueWords("   ")).toEqual([]);
   });
 });
 

@@ -33,7 +33,7 @@ release and the docs site. The fixture exercises:
 
 Its public API is made up of the functions `greet`, `parseGreeting`,
 `renderGreeting`, `wordCount`, `initials`, `reverseWords`, `longestWord`,
-`toSlug` and `toIdentifier`, plus the `Greeting` type and the `GreetingError` class.
+`uniqueWords`, `toSlug` and `toIdentifier`, plus the `Greeting` type and the `GreetingError` class.
 
 ## Getting Started
 
