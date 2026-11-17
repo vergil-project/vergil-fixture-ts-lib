@@ -544,6 +544,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#longestword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        longestWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -711,6 +722,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#longestword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        longestWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -839,6 +861,16 @@ spaces.</p>
 
 <span class="nx">reverseWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "fox brown quick the"</span>
 <span class="nx">reverseWords</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
+</code></pre></div>
+<h3 id="longestword"><code>longestWord</code><a class="headerlink" href="#longestword" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">longestWord</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</code></pre></div>
+<p>The longest whitespace-separated word in <code>text</code>, measured in characters (code
+points). On a tie it gives the first such word, and for blank text <code>""</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">longestWord</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">longestWord</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "quick"</span>
+<span class="nx">longestWord</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
 </code></pre></div>
 <h3 id="toslug"><code>toSlug</code><a class="headerlink" href="#toslug" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">toSlug</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
