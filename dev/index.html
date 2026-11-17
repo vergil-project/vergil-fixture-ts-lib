@@ -253,6 +253,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -314,6 +333,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -330,6 +367,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -362,6 +429,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -382,6 +476,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -398,7 +511,33 @@
 
 
 <h1 id="vergil-fixture-ts-lib">vergil-fixture-ts-lib<a class="headerlink" href="#vergil-fixture-ts-lib" title="Permanent link">&para;</a></h1>
-<p>Welcome to the vergil-fixture-ts-lib documentation.</p>
+<div class="admonition warning">
+<p class="admonition-title">A test fixture, not a real library</p>
+<p>This package is a Vergil test fixture. It has no users, and it is never
+published to npm.</p>
+</div>
+<p><code>vergil-fixture-ts-lib</code> is a small TypeScript library that exists so Vergil's
+TypeScript support has a real library to work on. Each fixture run makes a
+small change to it and drives that change through Vergil's whole cycle for
+real: the PR, CI, the merge, the release and this docs site. A step that
+breaks shows up here before it reaches a real TypeScript repo.</p>
+<p>It exercises:</p>
+<ul>
+<li><code>vrg-validate</code> for TypeScript: Prettier, then ESLint, <code>tsc</code> and Vitest from
+  the repo's own <code>node_modules</code>, the build to <code>dist/</code>, the tests at 100% line
+  coverage, and the <code>npm audit</code> and license checks;</li>
+<li>the CI and release workflows a real TypeScript library gets, with every
+  fleet automation enabled;</li>
+<li>two real runtime dependencies, <code>zod</code> and <code>change-case</code>, so the audit, the
+  license check and Dependabot have real work to do.</li>
+</ul>
+<p>Why the fixtures exist, and how a fixture run works, is set out in the
+<a href="https://github.com/vergil-project/.github/blob/develop/epics/1091-language-fixture-repos/spec.md">language fixture repos spec</a>.</p>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="getting-started/">Getting Started</a>: build and test the library.</li>
+<li><a href="api/">API</a>: the library's public functions.</li>
+</ul>
 
 
 
