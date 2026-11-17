@@ -128,6 +128,22 @@ reverseWords("the quick  brown fox"); // "fox brown quick the"
 reverseWords("   "); // ""
 ```
 
+### `longestWord`
+
+```ts
+function longestWord(text: string): string;
+```
+
+The longest whitespace-separated word in `text`, measured in characters (code
+points). On a tie it gives the first such word, and for blank text `""`.
+
+```ts
+import { longestWord } from "vergil-fixture-ts-lib";
+
+longestWord("the quick  brown fox"); // "quick"
+longestWord("   "); // ""
+```
+
 ### `toSlug`
 
 ```ts

@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { initials, reverseWords, toIdentifier, toSlug, wordCount } from "../src/index.js";
+import {
+  initials,
+  longestWord,
+  reverseWords,
+  toIdentifier,
+  toSlug,
+  wordCount,
+} from "../src/index.js";
 
 describe("wordCount", () => {
   it("counts whitespace-separated words", () => {
@@ -36,6 +43,21 @@ describe("reverseWords", () => {
 
   it("gives nothing for blank text", () => {
     expect(reverseWords("   ")).toBe("");
+  });
+});
+
+describe("longestWord", () => {
+  it("gives the longest word, the first one on a tie", () => {
+    expect(longestWord("the quick  brown fox")).toBe("quick");
+    expect(longestWord("ab cd")).toBe("ab");
+  });
+
+  it("measures a word in characters, not UTF-16 code units", () => {
+    expect(longestWord("𝒜𝒜 abc")).toBe("abc");
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(longestWord("   ")).toBe("");
   });
 });
 

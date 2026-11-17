@@ -32,8 +32,8 @@ release and the docs site. The fixture exercises:
 - two real runtime dependencies, `zod` and `change-case`.
 
 Its public API is made up of the functions `greet`, `parseGreeting`,
-`renderGreeting`, `wordCount`, `initials`, `reverseWords`, `toSlug` and
-`toIdentifier`, plus the `Greeting` type and the `GreetingError` class.
+`renderGreeting`, `wordCount`, `initials`, `reverseWords`, `longestWord`,
+`toSlug` and `toIdentifier`, plus the `Greeting` type and the `GreetingError` class.
 
 ## Getting Started
 
