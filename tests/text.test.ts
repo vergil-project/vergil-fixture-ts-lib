@@ -7,6 +7,7 @@ import {
   reverseWords,
   toIdentifier,
   toSlug,
+  truncateWords,
   uniqueWords,
   wordCount,
 } from "../src/index.js";
@@ -93,6 +94,28 @@ describe("capitalizeWords", () => {
 
   it("gives nothing for blank text", () => {
     expect(capitalizeWords("   ")).toBe("");
+  });
+});
+
+describe("truncateWords", () => {
+  it("gives the first count words, joined by single spaces", () => {
+    expect(truncateWords("the quick  brown fox", 2)).toBe("the quick");
+    expect(truncateWords("\tone\ntwo three", 2)).toBe("one two");
+  });
+
+  it("gives every word when the text has fewer than count", () => {
+    expect(truncateWords("the quick  brown fox", 9)).toBe("the quick brown fox");
+  });
+
+  it("gives nothing for a count of 0 or blank text", () => {
+    expect(truncateWords("the quick brown fox", 0)).toBe("");
+    expect(truncateWords("   ", 3)).toBe("");
+  });
+
+  it.each([-1, 1.5, Number.NaN, Number.POSITIVE_INFINITY])("rejects a count of %s", (count) => {
+    expect(() => truncateWords("the quick brown fox", count)).toThrow(
+      new RangeError(`count must be a non-negative integer, not ${String(count)}`),
+    );
   });
 });
 

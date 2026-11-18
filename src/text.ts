@@ -81,6 +81,22 @@ export function capitalizeWords(text: string): string {
 }
 
 /**
+ * The first `count` whitespace-separated words of `text`, joined by single
+ * spaces; all of them when `text` has fewer, and `""` for a `count` of 0.
+ *
+ * @throws {RangeError} when `count` is not a non-negative integer.
+ *
+ * @example
+ * truncateWords("the quick  brown fox", 2); // "the quick"
+ */
+export function truncateWords(text: string, count: number): string {
+  if (!Number.isInteger(count) || count < 0) {
+    throw new RangeError(`count must be a non-negative integer, not ${String(count)}`);
+  }
+  return words(text).slice(0, count).join(" ");
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
