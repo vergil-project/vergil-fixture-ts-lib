@@ -577,6 +577,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#truncatewords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        truncateWords
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -777,6 +788,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#truncatewords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        truncateWords
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -937,6 +959,18 @@ blank text it gives <code>""</code>.</p>
 
 <span class="nx">capitalizeWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "The Quick Brown Fox"</span>
 <span class="nx">capitalizeWords</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
+</code></pre></div>
+<h3 id="truncatewords"><code>truncateWords</code><a class="headerlink" href="#truncatewords" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">truncateWords</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</code></pre></div>
+<p>The first <code>count</code> whitespace-separated words of <code>text</code>, joined by single
+spaces. When <code>text</code> has fewer than <code>count</code> words it gives all of them, and for
+a <code>count</code> of 0 it gives <code>""</code>. It throws a <code>RangeError</code> when <code>count</code> is not a
+non-negative integer.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">truncateWords</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">truncateWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// "the quick"</span>
+<span class="nx">truncateWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">);</span><span class="w"> </span><span class="c1">// "the quick brown fox"</span>
 </code></pre></div>
 <h3 id="toslug"><code>toSlug</code><a class="headerlink" href="#toslug" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">toSlug</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
