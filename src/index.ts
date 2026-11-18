@@ -11,6 +11,7 @@ export {
   reverseWords,
   toIdentifier,
   toSlug,
+  truncateWords,
   uniqueWords,
   wordCount,
 } from "./text.js";
