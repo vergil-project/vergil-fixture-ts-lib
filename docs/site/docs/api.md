@@ -161,6 +161,23 @@ uniqueWords("the cat saw the  dog"); // ["the", "cat", "saw", "dog"]
 uniqueWords("   "); // []
 ```
 
+### `capitalizeWords`
+
+```ts
+function capitalizeWords(text: string): string;
+```
+
+The whitespace-separated words of `text`, each with its first character (code
+point) upper-cased and the rest left as they are, joined by single spaces. For
+blank text it gives `""`.
+
+```ts
+import { capitalizeWords } from "vergil-fixture-ts-lib";
+
+capitalizeWords("the quick  brown fox"); // "The Quick Brown Fox"
+capitalizeWords("   "); // ""
+```
+
 ### `toSlug`
 
 ```ts

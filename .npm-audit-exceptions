@@ -1,0 +1,11 @@
+# Time-boxed npm audit exceptions, read by vrg-npm-audit-gate (the npm
+# counterpart of .trivyignore). One entry per line:
+#   <GHSA-ID> exp:YYYY-MM-DD <tracking issue> <reason>
+#
+# GHSA-fc5q-39xc-vjpf: ReDoS in picomatch <=4.0.7, with no patched release yet.
+# Dev-only: reached through vitest, vite, tinyglobby (fdir) and typescript-eslint;
+# npm's only offered fix is a semver-major downgrade of vitest and typescript-eslint.
+# Acknowledged per the human's ruling on vergil-project/.github#1218 (2026-11-18),
+# treated like a trivy CVE with no fix. Remove this entry once picomatch ships a
+# patched release and the lockfile picks it up (tracked in #20).
+GHSA-fc5q-39xc-vjpf exp:2026-12-18 vergil-project/vergil-fixture-ts-lib#20 ReDoS in picomatch <=4.0.7 with no patched release; dev-only
