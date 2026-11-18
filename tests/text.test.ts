@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  capitalizeWords,
   initials,
   longestWord,
   reverseWords,
@@ -73,6 +74,25 @@ describe("uniqueWords", () => {
 
   it("gives nothing for blank text", () => {
     expect(uniqueWords("   ")).toEqual([]);
+  });
+});
+
+describe("capitalizeWords", () => {
+  it("upper-cases the first letter of each word, joined by single spaces", () => {
+    expect(capitalizeWords("the quick  brown fox")).toBe("The Quick Brown Fox");
+    expect(capitalizeWords("émilie du\tchâtelet")).toBe("Émilie Du Châtelet");
+  });
+
+  it("leaves the rest of each word as it is", () => {
+    expect(capitalizeWords("mcDonald iPHONE")).toBe("McDonald IPHONE");
+  });
+
+  it("keeps a first character outside the Basic Multilingual Plane whole", () => {
+    expect(capitalizeWords("𝒜da lovelace")).toBe("𝒜da Lovelace");
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(capitalizeWords("   ")).toBe("");
   });
 });
 

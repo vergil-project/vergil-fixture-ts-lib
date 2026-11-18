@@ -67,6 +67,20 @@ export function uniqueWords(text: string): string[] {
 }
 
 /**
+ * The whitespace-separated words of `text`, each with its first character
+ * (code point) upper-cased and the rest left as they are, joined by single
+ * spaces; `""` for blank text.
+ *
+ * @example
+ * capitalizeWords("the quick  brown fox"); // "The Quick Brown Fox"
+ */
+export function capitalizeWords(text: string): string {
+  return words(text)
+    .map((word) => word.replace(/^./u, (first) => first.toUpperCase()))
+    .join(" ");
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
