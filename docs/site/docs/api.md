@@ -178,6 +178,24 @@ capitalizeWords("the quick  brown fox"); // "The Quick Brown Fox"
 capitalizeWords("   "); // ""
 ```
 
+### `truncateWords`
+
+```ts
+function truncateWords(text: string, count: number): string;
+```
+
+The first `count` whitespace-separated words of `text`, joined by single
+spaces. When `text` has fewer than `count` words it gives all of them, and for
+a `count` of 0 it gives `""`. It throws a `RangeError` when `count` is not a
+non-negative integer.
+
+```ts
+import { truncateWords } from "vergil-fixture-ts-lib";
+
+truncateWords("the quick  brown fox", 2); // "the quick"
+truncateWords("the quick  brown fox", 9); // "the quick brown fox"
+```
+
 ### `toSlug`
 
 ```ts
