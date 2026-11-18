@@ -566,6 +566,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#capitalizewords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        capitalizeWords
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -755,6 +766,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#capitalizewords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        capitalizeWords
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -904,6 +926,17 @@ words. For blank text it gives <code>[]</code>.</p>
 
 <span class="nx">uniqueWords</span><span class="p">(</span><span class="s2">"the cat saw the  dog"</span><span class="p">);</span><span class="w"> </span><span class="c1">// ["the", "cat", "saw", "dog"]</span>
 <span class="nx">uniqueWords</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// []</span>
+</code></pre></div>
+<h3 id="capitalizewords"><code>capitalizeWords</code><a class="headerlink" href="#capitalizewords" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">capitalizeWords</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</code></pre></div>
+<p>The whitespace-separated words of <code>text</code>, each with its first character (code
+point) upper-cased and the rest left as they are, joined by single spaces. For
+blank text it gives <code>""</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">capitalizeWords</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">capitalizeWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "The Quick Brown Fox"</span>
+<span class="nx">capitalizeWords</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
 </code></pre></div>
 <h3 id="toslug"><code>toSlug</code><a class="headerlink" href="#toslug" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">toSlug</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
