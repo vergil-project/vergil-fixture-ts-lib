@@ -11,6 +11,7 @@ import {
   truncateWords,
   uniqueWords,
   wordCount,
+  wordLengths,
 } from "../src/index.js";
 
 describe("wordCount", () => {
@@ -139,6 +140,21 @@ describe("countWord", () => {
     expect(() => countWord("the cat", word)).toThrow(
       new RangeError(`word must be one word with no whitespace, not ${JSON.stringify(word)}`),
     );
+  });
+});
+
+describe("wordLengths", () => {
+  it("gives the length of each word, in order", () => {
+    expect(wordLengths("the quick  brown fox")).toEqual([3, 5, 5, 3]);
+    expect(wordLengths("\tone\nthree ")).toEqual([3, 5]);
+  });
+
+  it("measures a word in characters, not UTF-16 code units", () => {
+    expect(wordLengths("𝒜𝒜 é")).toEqual([2, 1]);
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(wordLengths("   ")).toEqual([]);
   });
 });
 
