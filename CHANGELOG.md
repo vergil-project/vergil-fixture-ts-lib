@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.5] - 2026-11-19
+
+### CI
+
+- pass the automation App secrets to the release (#44)
+
+### Chores
+
+- npm update
+
+### Features
+
+- add wordLengths, the length of each word in a text (#49)
+
 ## [0.1.4] - 2026-11-19
 
 ### Features

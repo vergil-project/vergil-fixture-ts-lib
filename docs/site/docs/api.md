@@ -214,6 +214,23 @@ countWord("the cat saw the  dog", "the"); // 2
 countWord("the cat", "dog"); // 0
 ```
 
+### `wordLengths`
+
+```ts
+function wordLengths(text: string): number[];
+```
+
+The length of each whitespace-separated word of `text`, in order, measured in
+characters (code points), so a character outside the Basic Multilingual Plane
+counts once. For blank text it gives `[]`.
+
+```ts
+import { wordLengths } from "vergil-fixture-ts-lib";
+
+wordLengths("the quick  brown fox"); // [3, 5, 5, 3]
+wordLengths("   "); // []
+```
+
 ### `toSlug`
 
 ```ts

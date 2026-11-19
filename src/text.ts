@@ -113,6 +113,17 @@ export function countWord(text: string, word: string): number {
 }
 
 /**
+ * The length of each whitespace-separated word of `text`, in order, measured
+ * in characters (code points); `[]` for blank text.
+ *
+ * @example
+ * wordLengths("the quick  brown fox"); // [3, 5, 5, 3]
+ */
+export function wordLengths(text: string): number[] {
+  return words(text).map((word) => Array.from(word).length);
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
