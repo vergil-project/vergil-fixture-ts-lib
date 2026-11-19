@@ -23,3 +23,6 @@ jobs:
     uses: vergil-project/vergil-actions/.github/workflows/cd-release.yml@v2.1
     with:
       language: ts-node
+    secrets:
+      APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
+      APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
