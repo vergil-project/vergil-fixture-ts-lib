@@ -15,4 +15,5 @@ export {
   truncateWords,
   uniqueWords,
   wordCount,
+  wordLengths,
 } from "./text.js";
