@@ -6,6 +6,7 @@ export { greet, parseGreeting, renderGreeting } from "./greeting.js";
 export type { Greeting } from "./greeting.js";
 export {
   capitalizeWords,
+  countWord,
   initials,
   longestWord,
   reverseWords,

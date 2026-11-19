@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   capitalizeWords,
+  countWord,
   initials,
   longestWord,
   reverseWords,
@@ -115,6 +116,28 @@ describe("truncateWords", () => {
   it.each([-1, 1.5, Number.NaN, Number.POSITIVE_INFINITY])("rejects a count of %s", (count) => {
     expect(() => truncateWords("the quick brown fox", count)).toThrow(
       new RangeError(`count must be a non-negative integer, not ${String(count)}`),
+    );
+  });
+});
+
+describe("countWord", () => {
+  it("counts the whole-word occurrences of a word", () => {
+    expect(countWord("the cat saw the  dog", "the")).toBe(2);
+    expect(countWord("then the other", "the")).toBe(1);
+  });
+
+  it("compares words exactly, so case matters", () => {
+    expect(countWord("The the THE", "the")).toBe(1);
+  });
+
+  it("gives 0 for a word that does not occur, and for blank text", () => {
+    expect(countWord("the cat", "dog")).toBe(0);
+    expect(countWord("   ", "dog")).toBe(0);
+  });
+
+  it.each(["", " ", "two words", "tab\there"])("rejects a word of %j", (word) => {
+    expect(() => countWord("the cat", word)).toThrow(
+      new RangeError(`word must be one word with no whitespace, not ${JSON.stringify(word)}`),
     );
   });
 });

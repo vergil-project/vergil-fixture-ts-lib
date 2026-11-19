@@ -196,6 +196,24 @@ truncateWords("the quick  brown fox", 2); // "the quick"
 truncateWords("the quick  brown fox", 9); // "the quick brown fox"
 ```
 
+### `countWord`
+
+```ts
+function countWord(text: string, word: string): number;
+```
+
+How many times `word` occurs among the whitespace-separated words of `text`.
+Words are compared exactly and whole, so neither `"The"` nor `"then"` counts
+as `"the"`. It gives 0 when `word` does not occur, and throws a `RangeError`
+when `word` is empty or contains whitespace.
+
+```ts
+import { countWord } from "vergil-fixture-ts-lib";
+
+countWord("the cat saw the  dog", "the"); // 2
+countWord("the cat", "dog"); // 0
+```
+
 ### `toSlug`
 
 ```ts
