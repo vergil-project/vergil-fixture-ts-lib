@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -599,6 +599,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#wordlengths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wordLengths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -821,6 +832,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#wordlengths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wordLengths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1005,6 +1027,17 @@ when <code>word</code> is empty or contains whitespace.</p>
 
 <span class="nx">countWord</span><span class="p">(</span><span class="s2">"the cat saw the  dog"</span><span class="p">,</span><span class="w"> </span><span class="s2">"the"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
 <span class="nx">countWord</span><span class="p">(</span><span class="s2">"the cat"</span><span class="p">,</span><span class="w"> </span><span class="s2">"dog"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
+</code></pre></div>
+<h3 id="wordlengths"><code>wordLengths</code><a class="headerlink" href="#wordlengths" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">wordLengths</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">[];</span>
+</code></pre></div>
+<p>The length of each whitespace-separated word of <code>text</code>, in order, measured in
+characters (code points), so a character outside the Basic Multilingual Plane
+counts once. For blank text it gives <code>[]</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">wordLengths</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">wordLengths</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// [3, 5, 5, 3]</span>
+<span class="nx">wordLengths</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// []</span>
 </code></pre></div>
 <h3 id="toslug"><code>toSlug</code><a class="headerlink" href="#toslug" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">toSlug</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
