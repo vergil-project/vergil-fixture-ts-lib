@@ -588,6 +588,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#countword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        countWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -799,6 +810,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#countword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        countWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toslug" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -971,6 +993,18 @@ non-negative integer.</p>
 
 <span class="nx">truncateWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// "the quick"</span>
 <span class="nx">truncateWords</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">);</span><span class="w"> </span><span class="c1">// "the quick brown fox"</span>
+</code></pre></div>
+<h3 id="countword"><code>countWord</code><a class="headerlink" href="#countword" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">countWord</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">word</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+</code></pre></div>
+<p>How many times <code>word</code> occurs among the whitespace-separated words of <code>text</code>.
+Words are compared exactly and whole, so neither <code>"The"</code> nor <code>"then"</code> counts
+as <code>"the"</code>. It gives 0 when <code>word</code> does not occur, and throws a <code>RangeError</code>
+when <code>word</code> is empty or contains whitespace.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">countWord</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">countWord</span><span class="p">(</span><span class="s2">"the cat saw the  dog"</span><span class="p">,</span><span class="w"> </span><span class="s2">"the"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+<span class="nx">countWord</span><span class="p">(</span><span class="s2">"the cat"</span><span class="p">,</span><span class="w"> </span><span class="s2">"dog"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
 </code></pre></div>
 <h3 id="toslug"><code>toSlug</code><a class="headerlink" href="#toslug" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">toSlug</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
