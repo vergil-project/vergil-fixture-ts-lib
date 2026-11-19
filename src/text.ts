@@ -97,6 +97,22 @@ export function truncateWords(text: string, count: number): string {
 }
 
 /**
+ * How many times `word` occurs among the whitespace-separated words of
+ * `text`, compared exactly (case-sensitive); 0 when it does not occur.
+ *
+ * @throws {RangeError} when `word` is empty or contains whitespace.
+ *
+ * @example
+ * countWord("the cat saw the  dog", "the"); // 2
+ */
+export function countWord(text: string, word: string): number {
+  if (word === "" || /\s/u.test(word)) {
+    throw new RangeError(`word must be one word with no whitespace, not ${JSON.stringify(word)}`);
+  }
+  return words(text).filter((candidate) => candidate === word).length;
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
