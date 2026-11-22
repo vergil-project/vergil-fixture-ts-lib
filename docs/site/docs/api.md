@@ -144,6 +144,22 @@ longestWord("the quick  brown fox"); // "quick"
 longestWord("   "); // ""
 ```
 
+### `shortestWord`
+
+```ts
+function shortestWord(text: string): string;
+```
+
+The shortest whitespace-separated word in `text`, measured in characters (code
+points). On a tie it gives the first such word, and for blank text `""`.
+
+```ts
+import { shortestWord } from "vergil-fixture-ts-lib";
+
+shortestWord("the quick  brown fox"); // "the"
+shortestWord("   "); // ""
+```
+
 ### `uniqueWords`
 
 ```ts

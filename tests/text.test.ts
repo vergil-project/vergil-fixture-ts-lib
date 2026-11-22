@@ -6,6 +6,7 @@ import {
   initials,
   longestWord,
   reverseWords,
+  shortestWord,
   toIdentifier,
   toSlug,
   truncateWords,
@@ -63,6 +64,21 @@ describe("longestWord", () => {
 
   it("gives nothing for blank text", () => {
     expect(longestWord("   ")).toBe("");
+  });
+});
+
+describe("shortestWord", () => {
+  it("gives the shortest word, the first one on a tie", () => {
+    expect(shortestWord("the quick  brown fox")).toBe("the");
+    expect(shortestWord("ab cd")).toBe("ab");
+  });
+
+  it("measures a word in characters, not UTF-16 code units", () => {
+    expect(shortestWord("abc 𝒜𝒜")).toBe("𝒜𝒜");
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(shortestWord("   ")).toBe("");
   });
 });
 

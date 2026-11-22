@@ -10,6 +10,7 @@ export {
   initials,
   longestWord,
   reverseWords,
+  shortestWord,
   toIdentifier,
   toSlug,
   truncateWords,
