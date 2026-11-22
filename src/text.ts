@@ -56,6 +56,26 @@ export function longestWord(text: string): string {
 }
 
 /**
+ * The shortest whitespace-separated word in `text`, measured in characters
+ * (code points); the first one on a tie, and `""` for blank text.
+ *
+ * @example
+ * shortestWord("the quick  brown fox"); // "the"
+ */
+export function shortestWord(text: string): string {
+  let shortest = "";
+  let shortestLength = Number.POSITIVE_INFINITY;
+  for (const word of words(text)) {
+    const length = Array.from(word).length;
+    if (length < shortestLength) {
+      shortest = word;
+      shortestLength = length;
+    }
+  }
+  return shortest;
+}
+
+/**
  * The distinct whitespace-separated words of `text`, in the order each first
  * appears, compared exactly (case-sensitive); `[]` for blank text.
  *
