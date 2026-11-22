@@ -4,6 +4,7 @@ import {
   capitalizeWords,
   countWord,
   initials,
+  lastWord,
   longestWord,
   reverseWords,
   shortestWord,
@@ -171,6 +172,22 @@ describe("wordLengths", () => {
 
   it("gives nothing for blank text", () => {
     expect(wordLengths("   ")).toEqual([]);
+  });
+});
+
+describe("lastWord", () => {
+  it("gives the last word", () => {
+    expect(lastWord("the quick  brown fox")).toBe("fox");
+    expect(lastWord("one")).toBe("one");
+  });
+
+  it("ignores trailing whitespace", () => {
+    expect(lastWord("the quick fox \t\n")).toBe("fox");
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(lastWord("")).toBe("");
+    expect(lastWord("   ")).toBe("");
   });
 });
 

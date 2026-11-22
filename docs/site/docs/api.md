@@ -247,6 +247,22 @@ wordLengths("the quick  brown fox"); // [3, 5, 5, 3]
 wordLengths("   "); // []
 ```
 
+### `lastWord`
+
+```ts
+function lastWord(text: string): string;
+```
+
+The last whitespace-separated word of `text`, ignoring any trailing
+whitespace. For blank text it gives `""`.
+
+```ts
+import { lastWord } from "vergil-fixture-ts-lib";
+
+lastWord("the quick  brown fox "); // "fox"
+lastWord("   "); // ""
+```
+
 ### `toSlug`
 
 ```ts
