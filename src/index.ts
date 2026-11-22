@@ -8,6 +8,7 @@ export {
   capitalizeWords,
   countWord,
   initials,
+  lastWord,
   longestWord,
   reverseWords,
   shortestWord,

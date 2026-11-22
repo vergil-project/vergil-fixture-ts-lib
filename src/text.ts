@@ -144,6 +144,16 @@ export function wordLengths(text: string): number[] {
 }
 
 /**
+ * The last whitespace-separated word of `text`; `""` for blank text.
+ *
+ * @example
+ * lastWord("the quick  brown fox "); // "fox"
+ */
+export function lastWord(text: string): string {
+  return words(text).at(-1) ?? "";
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
