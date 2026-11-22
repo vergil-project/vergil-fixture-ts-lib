@@ -555,6 +555,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#shortestword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shortestWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#uniquewords" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -788,6 +799,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#shortestword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shortestWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#uniquewords" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -981,6 +1003,16 @@ points). On a tie it gives the first such word, and for blank text <code>""</cod
 
 <span class="nx">longestWord</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "quick"</span>
 <span class="nx">longestWord</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
+</code></pre></div>
+<h3 id="shortestword"><code>shortestWord</code><a class="headerlink" href="#shortestword" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">shortestWord</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</code></pre></div>
+<p>The shortest whitespace-separated word in <code>text</code>, measured in characters (code
+points). On a tie it gives the first such word, and for blank text <code>""</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shortestWord</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">shortestWord</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "the"</span>
+<span class="nx">shortestWord</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
 </code></pre></div>
 <h3 id="uniquewords"><code>uniqueWords</code><a class="headerlink" href="#uniquewords" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">uniqueWords</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
