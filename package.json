@@ -1,6 +1,6 @@
 {
   "name": "vergil-fixture-ts-lib",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Vergil test fixture: a small TypeScript library. No users.",
   "license": "MIT",
   "private": true,
