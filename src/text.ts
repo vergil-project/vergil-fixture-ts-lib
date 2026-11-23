@@ -144,6 +144,16 @@ export function wordLengths(text: string): number[] {
 }
 
 /**
+ * The first whitespace-separated word of `text`; `""` for blank text.
+ *
+ * @example
+ * firstWord(" the quick  brown fox"); // "the"
+ */
+export function firstWord(text: string): string {
+  return words(text).at(0) ?? "";
+}
+
+/**
  * The last whitespace-separated word of `text`; `""` for blank text.
  *
  * @example

@@ -247,6 +247,22 @@ wordLengths("the quick  brown fox"); // [3, 5, 5, 3]
 wordLengths("   "); // []
 ```
 
+### `firstWord`
+
+```ts
+function firstWord(text: string): string;
+```
+
+The first whitespace-separated word of `text`, ignoring any leading
+whitespace. For blank text it gives `""`.
+
+```ts
+import { firstWord } from "vergil-fixture-ts-lib";
+
+firstWord(" the quick  brown fox"); // "the"
+firstWord("   "); // ""
+```
+
 ### `lastWord`
 
 ```ts
