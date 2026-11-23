@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   capitalizeWords,
   countWord,
+  firstWord,
   initials,
   lastWord,
   longestWord,
@@ -172,6 +173,22 @@ describe("wordLengths", () => {
 
   it("gives nothing for blank text", () => {
     expect(wordLengths("   ")).toEqual([]);
+  });
+});
+
+describe("firstWord", () => {
+  it("gives the first word", () => {
+    expect(firstWord("the quick  brown fox")).toBe("the");
+    expect(firstWord("one")).toBe("one");
+  });
+
+  it("ignores leading whitespace", () => {
+    expect(firstWord(" \t\nthe quick fox")).toBe("the");
+  });
+
+  it("gives nothing for blank text", () => {
+    expect(firstWord("")).toBe("");
+    expect(firstWord("   ")).toBe("");
   });
 });
 
