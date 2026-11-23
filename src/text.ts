@@ -164,6 +164,21 @@ export function lastWord(text: string): string {
 }
 
 /**
+ * The mean length of the whitespace-separated words of `text`, measured in
+ * characters (code points); 0 for blank text.
+ *
+ * @example
+ * averageWordLength("the quick  brown fox"); // 4
+ */
+export function averageWordLength(text: string): number {
+  const lengths = wordLengths(text);
+  if (lengths.length === 0) {
+    return 0;
+  }
+  return lengths.reduce((total, length) => total + length, 0) / lengths.length;
+}
+
+/**
  * `text` as a lower-case, hyphen-separated slug, by `change-case`'s `kebabCase`.
  *
  * @example
