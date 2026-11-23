@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  averageWordLength,
   capitalizeWords,
   countWord,
   firstWord,
@@ -205,6 +206,23 @@ describe("lastWord", () => {
   it("gives nothing for blank text", () => {
     expect(lastWord("")).toBe("");
     expect(lastWord("   ")).toBe("");
+  });
+});
+
+describe("averageWordLength", () => {
+  it("gives the mean length of the words", () => {
+    expect(averageWordLength("the quick  brown fox")).toBe(4);
+    expect(averageWordLength("\tab\nabcd ")).toBe(3);
+    expect(averageWordLength("a ab")).toBe(1.5);
+  });
+
+  it("measures a word in characters, not UTF-16 code units", () => {
+    expect(averageWordLength("𝒜𝒜 é")).toBe(1.5);
+  });
+
+  it("gives 0 for blank text", () => {
+    expect(averageWordLength("")).toBe(0);
+    expect(averageWordLength("   ")).toBe(0);
   });
 });
 

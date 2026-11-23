@@ -279,6 +279,23 @@ lastWord("the quick  brown fox "); // "fox"
 lastWord("   "); // ""
 ```
 
+### `averageWordLength`
+
+```ts
+function averageWordLength(text: string): number;
+```
+
+The mean length of the whitespace-separated words of `text`, measured in
+characters (code points), so a character outside the Basic Multilingual
+Plane counts once. For blank text it gives `0`.
+
+```ts
+import { averageWordLength } from "vergil-fixture-ts-lib";
+
+averageWordLength("the quick  brown fox"); // 4
+averageWordLength("   "); // 0
+```
+
 ### `toSlug`
 
 ```ts
