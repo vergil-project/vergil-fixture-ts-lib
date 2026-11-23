@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.9] - 2026-11-23
+
+### CI
+
+- pass the App secrets to the shared docs workflows (#84)
+
+### Chores
+
+- npm update
+
+### Features
+
+- add averageWordLength, the mean word length of a text (#86)
+
 ## [0.1.8] - 2026-11-23
 
 ### Chores
