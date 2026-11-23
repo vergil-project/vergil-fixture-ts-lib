@@ -621,6 +621,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#firstword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firstWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lastword" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -876,6 +887,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#firstword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firstWord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lastword" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1092,6 +1114,16 @@ counts once. For blank text it gives <code>[]</code>.</p>
 
 <span class="nx">wordLengths</span><span class="p">(</span><span class="s2">"the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// [3, 5, 5, 3]</span>
 <span class="nx">wordLengths</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// []</span>
+</code></pre></div>
+<h3 id="firstword"><code>firstWord</code><a class="headerlink" href="#firstword" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">firstWord</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</code></pre></div>
+<p>The first whitespace-separated word of <code>text</code>, ignoring any leading
+whitespace. For blank text it gives <code>""</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">firstWord</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vergil-fixture-ts-lib"</span><span class="p">;</span>
+
+<span class="nx">firstWord</span><span class="p">(</span><span class="s2">" the quick  brown fox"</span><span class="p">);</span><span class="w"> </span><span class="c1">// "the"</span>
+<span class="nx">firstWord</span><span class="p">(</span><span class="s2">"   "</span><span class="p">);</span><span class="w"> </span><span class="c1">// ""</span>
 </code></pre></div>
 <h3 id="lastword"><code>lastWord</code><a class="headerlink" href="#lastword" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">lastWord</span><span class="p">(</span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
