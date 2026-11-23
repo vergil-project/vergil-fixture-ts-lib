@@ -5,6 +5,7 @@ export type { GreetingErrorKind } from "./errors.js";
 export { greet, parseGreeting, renderGreeting } from "./greeting.js";
 export type { Greeting } from "./greeting.js";
 export {
+  averageWordLength,
   capitalizeWords,
   countWord,
   firstWord,
