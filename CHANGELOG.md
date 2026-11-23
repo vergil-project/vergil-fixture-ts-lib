@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.8] - 2026-11-23
+
+### Chores
+
+- npm update
+- remove the withdrawn picomatch audit exception (#78)
+
+### Features
+
+- add firstWord, the first word in a text (#79)
+
 ## [0.1.7] - 2026-11-22
 
 ### CI
