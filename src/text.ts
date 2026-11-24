@@ -87,6 +87,22 @@ export function uniqueWords(text: string): string[] {
 }
 
 /**
+ * The distinct whitespace-separated words of `text` that occur more than
+ * once, in the order each first appears, compared exactly (case-sensitive);
+ * `[]` when no word repeats.
+ *
+ * @example
+ * repeatedWords("the cat saw the  dog and the cat"); // ["the", "cat"]
+ */
+export function repeatedWords(text: string): string[] {
+  const counts = new Map<string, number>();
+  for (const word of words(text)) {
+    counts.set(word, (counts.get(word) ?? 0) + 1);
+  }
+  return [...counts].filter(([, count]) => count > 1).map(([word]) => word);
+}
+
+/**
  * The whitespace-separated words of `text`, each with its first character
  * (code point) upper-cased and the rest left as they are, joined by single
  * spaces; `""` for blank text.

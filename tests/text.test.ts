@@ -8,6 +8,7 @@ import {
   initials,
   lastWord,
   longestWord,
+  repeatedWords,
   reverseWords,
   shortestWord,
   toIdentifier,
@@ -96,6 +97,22 @@ describe("uniqueWords", () => {
 
   it("gives nothing for blank text", () => {
     expect(uniqueWords("   ")).toEqual([]);
+  });
+});
+
+describe("repeatedWords", () => {
+  it("gives each word that occurs more than once, in the order it first appears", () => {
+    expect(repeatedWords("the cat saw the  dog and the cat")).toEqual(["the", "cat"]);
+    expect(repeatedWords("\tone\ntwo one ")).toEqual(["one"]);
+  });
+
+  it("compares words exactly, so case matters", () => {
+    expect(repeatedWords("The the THE")).toEqual([]);
+  });
+
+  it("gives nothing when no word repeats, and for blank text", () => {
+    expect(repeatedWords("the quick brown fox")).toEqual([]);
+    expect(repeatedWords("   ")).toEqual([]);
   });
 });
 
