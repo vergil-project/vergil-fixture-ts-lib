@@ -12,6 +12,7 @@ export {
   initials,
   lastWord,
   longestWord,
+  repeatedWords,
   reverseWords,
   shortestWord,
   toIdentifier,
