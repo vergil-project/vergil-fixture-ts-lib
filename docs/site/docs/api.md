@@ -177,6 +177,24 @@ uniqueWords("the cat saw the  dog"); // ["the", "cat", "saw", "dog"]
 uniqueWords("   "); // []
 ```
 
+### `repeatedWords`
+
+```ts
+function repeatedWords(text: string): string[];
+```
+
+The distinct whitespace-separated words of `text` that occur more than once,
+in the order each first appears. Words are compared exactly, so `"The"` and
+`"the"` are different words. When no word repeats, and for blank text, it
+gives `[]`.
+
+```ts
+import { repeatedWords } from "vergil-fixture-ts-lib";
+
+repeatedWords("the cat saw the  dog and the cat"); // ["the", "cat"]
+repeatedWords("   "); // []
+```
+
 ### `capitalizeWords`
 
 ```ts
