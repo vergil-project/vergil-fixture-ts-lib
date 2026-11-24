@@ -20,3 +20,20 @@ jobs:
     # reusable workflow only under `secrets: inherit`. Allowed only for the
     # App-key workflows (vrg-validate's secrets-inherit check).
     secrets: inherit
+
+  # The daily audit of agent merges (epic vergil-project/.github#1384). The
+  # job name is fixed: hoshin reads the audit by it. It runs after the config
+  # job but not only on its success, so a failing config job does not skip
+  # the audit. It has no reporting job: a security signal never goes to a
+  # public ops issue.
+  agent-audit:
+    needs: github-config
+    if: ${{ !cancelled() }}
+    uses: vergil-project/vergil-actions/.github/workflows/ops-agent-audit.yml@v2.1
+    permissions:
+      contents: read
+    # `inherit` is required: the automation App keys live in the
+    # `automation` environment, and environment secrets reach a cross-repo
+    # reusable workflow only under `secrets: inherit`. Allowed only for the
+    # App-key workflows (vrg-validate's secrets-inherit check).
+    secrets: inherit
