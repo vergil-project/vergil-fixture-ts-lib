@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.10] - 2026-11-24
+
+### CI
+
+- read the automation App secrets from the automation environment (#92)
+
+### Chores
+
+- npm update
+- sync the managed files with the released templates (#91)
+- sync the managed files with the released templates (#95)
+
+### Features
+
+- the daily agent audit (#94)
+- add repeatedWords, the words a text repeats (#96)
+
 ## [0.1.9] - 2026-11-23
 
 ### CI
