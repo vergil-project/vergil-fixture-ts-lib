@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "issue": "109",
+  "branch": "feature/109-fixture-change",
+  "base": "origin/develop",
+  "status": "ready",
+  "recorded_by": "user",
+  "created_at": "2026-11-28T12:19:41Z",
+  "updated_at": "2026-11-28T12:19:41Z",
+  "git": {
+    "base_sha": "f93be7e6218c2439cba5b3a3971f6928b6a37392",
+    "head_sha": "e0ca1c64191b5f09ffd416f51d1eeba4aa734f33"
+  },
+  "pr_metadata": {
+    "title": "feat(text): add containsWord to test for a whole word",
+    "summary": "Adds containsWord, a whole-word membership test built on countWord, with tests at full coverage, and rolls the transitive @eslint-community/eslint-utils back to 4.9.1 in the lockfile only.",
+    "notes": "Merge review: done: eligible; accepted-risk 0\nRolled back: @eslint-community/eslint-utils 4.10.1 -> 4.9.1 (transitive)\nFixture run for epic vergil-project/.github#1664 (release lock and the one PR path, vergil-tooling 2.1.354). An earlier ms rollback was abandoned because debug@4.4.3 requires ms ^2.1.3. Serialization against epic 1668's run (#106-#108) waived by the human's scope change on the issue.",
+    "linkage": "Ref"
+  },
+  "submitted": null
+}
