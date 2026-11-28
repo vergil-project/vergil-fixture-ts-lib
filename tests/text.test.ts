@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   averageWordLength,
   capitalizeWords,
+  containsWord,
   countWord,
   firstWord,
   initials,
@@ -174,6 +175,33 @@ describe("countWord", () => {
 
   it.each(["", " ", "two words", "tab\there"])("rejects a word of %j", (word) => {
     expect(() => countWord("the cat", word)).toThrow(
+      new RangeError(`word must be one word with no whitespace, not ${JSON.stringify(word)}`),
+    );
+  });
+});
+
+describe("containsWord", () => {
+  it("is true when the word occurs", () => {
+    expect(containsWord("the cat saw the  dog", "the")).toBe(true);
+  });
+
+  it("matches whole words only", () => {
+    expect(containsWord("then the other", "the")).toBe(true);
+    expect(containsWord("then other", "the")).toBe(false);
+    expect(containsWord("other", "the")).toBe(false);
+  });
+
+  it("compares words exactly, so case matters", () => {
+    expect(containsWord("The THE", "the")).toBe(false);
+  });
+
+  it("is false when the word does not occur, and for blank text", () => {
+    expect(containsWord("the cat", "dog")).toBe(false);
+    expect(containsWord("   ", "dog")).toBe(false);
+  });
+
+  it.each(["", " ", "two words", "tab\there"])("rejects a word of %j", (word) => {
+    expect(() => containsWord("the cat", word)).toThrow(
       new RangeError(`word must be one word with no whitespace, not ${JSON.stringify(word)}`),
     );
   });
