@@ -149,6 +149,19 @@ export function countWord(text: string, word: string): number {
 }
 
 /**
+ * Whether `word` occurs among the whitespace-separated words of `text`,
+ * compared exactly (case-sensitive); `false` for blank text.
+ *
+ * @throws {RangeError} when `word` is empty or contains whitespace.
+ *
+ * @example
+ * containsWord("the cat saw the  dog", "the"); // true
+ */
+export function containsWord(text: string, word: string): boolean {
+  return countWord(text, word) > 0;
+}
+
+/**
  * The length of each whitespace-separated word of `text`, in order, measured
  * in characters (code points); `[]` for blank text.
  *

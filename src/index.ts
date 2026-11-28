@@ -7,6 +7,7 @@ export type { Greeting } from "./greeting.js";
 export {
   averageWordLength,
   capitalizeWords,
+  containsWord,
   countWord,
   firstWord,
   initials,
